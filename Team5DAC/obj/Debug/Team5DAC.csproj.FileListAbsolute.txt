@@ -1,0 +1,9 @@
+C:\Users\qhrud\OneDrive\문서\SVN_Team5\Team5-1\Team5DAC\bin\Debug\Team5DAC.dll
+C:\Users\qhrud\OneDrive\문서\SVN_Team5\Team5-1\Team5DAC\bin\Debug\Team5DAC.pdb
+C:\Users\qhrud\OneDrive\문서\SVN_Team5\Team5-1\Team5DAC\bin\Debug\TeamVO.dll
+C:\Users\qhrud\OneDrive\문서\SVN_Team5\Team5-1\Team5DAC\bin\Debug\TeamVO.pdb
+C:\Users\qhrud\OneDrive\문서\SVN_Team5\Team5-1\Team5DAC\obj\Debug\Team5DAC.csproj.AssemblyReference.cache
+C:\Users\qhrud\OneDrive\문서\SVN_Team5\Team5-1\Team5DAC\obj\Debug\Team5DAC.csproj.CoreCompileInputs.cache
+C:\Users\qhrud\OneDrive\문서\SVN_Team5\Team5-1\Team5DAC\obj\Debug\Team5DAC.csproj.CopyComplete
+C:\Users\qhrud\OneDrive\문서\SVN_Team5\Team5-1\Team5DAC\obj\Debug\Team5DAC.dll
+C:\Users\qhrud\OneDrive\문서\SVN_Team5\Team5-1\Team5DAC\obj\Debug\Team5DAC.pdb

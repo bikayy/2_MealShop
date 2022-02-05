@@ -1,0 +1,6 @@
+C:\Users\qhrud\OneDrive\문서\SVN_Team5\Team5-1\TeamVO\bin\Debug\TeamVO.dll
+C:\Users\qhrud\OneDrive\문서\SVN_Team5\Team5-1\TeamVO\bin\Debug\TeamVO.pdb
+C:\Users\qhrud\OneDrive\문서\SVN_Team5\Team5-1\TeamVO\obj\Debug\Team5VO.csproj.AssemblyReference.cache
+C:\Users\qhrud\OneDrive\문서\SVN_Team5\Team5-1\TeamVO\obj\Debug\Team5VO.csproj.CoreCompileInputs.cache
+C:\Users\qhrud\OneDrive\문서\SVN_Team5\Team5-1\TeamVO\obj\Debug\TeamVO.dll
+C:\Users\qhrud\OneDrive\문서\SVN_Team5\Team5-1\TeamVO\obj\Debug\TeamVO.pdb

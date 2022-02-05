@@ -1,0 +1,641 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4E243E9A-DD7F-42D2-ACAE-EF54CF7DC26E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Team5</RootNamespace>
+    <AssemblyName>Team5</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>Library\Microsoft.Office.Interop.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Vbe.Interop, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>Library\Microsoft.Vbe.Interop.dll</HintPath>
+    </Reference>
+    <Reference Include="OFFICE, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>Library\OFFICE.DLL</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdvancedList.cs" />
+    <Compile Include="Bom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bom.Designer.cs">
+      <DependentUpon>Bom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BomUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BomUpdate.Designer.cs">
+      <DependentUpon>BomUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseForm\BaseButton.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseForm\BaseButton.Designer.cs">
+      <DependentUpon>BaseButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseForm\BaseGridViewForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseForm\BaseGridViewForm.Designer.cs">
+      <DependentUpon>BaseGridViewForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseForm\BasePopupForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseForm\BasePopupForm.Designer.cs">
+      <DependentUpon>BasePopupForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseForm\BasePopupForm2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseForm\BasePopupForm2.Designer.cs">
+      <DependentUpon>BasePopupForm2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseForm\BaseTabMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseForm\BaseTabMenu.Designer.cs">
+      <DependentUpon>BaseTabMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseForm\BaseTreeGridForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseForm\BaseTreeGridForm.Designer.cs">
+      <DependentUpon>BaseTreeGridForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseForm\BaseGridViewForm2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseForm\BaseGridViewForm2.Designer.cs">
+      <DependentUpon>BaseGridViewForm2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseForm\BaseTreeChartListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseForm\BaseTreeChartListForm.Designer.cs">
+      <DependentUpon>BaseTreeChartListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Business.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Business.Designer.cs">
+      <DependentUpon>Business.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BusinessAdd.Designer.cs">
+      <DependentUpon>BusinessAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BomAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BomAdd.Designer.cs">
+      <DependentUpon>BomAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Base2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Base2.Designer.cs">
+      <DependentUpon>Base2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessProductSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BusinessProductSearch.Designer.cs">
+      <DependentUpon>BusinessProductSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cart.Designer.cs">
+      <DependentUpon>Cart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\DataGridViewControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\DataGridViewControl.Designer.cs">
+      <DependentUpon>DataGridViewControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ucOrderedReceipt.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ucOrderedReceipt.Designer.cs">
+      <DependentUpon>ucOrderedReceipt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ucProductInCart.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ucProductInCart.Designer.cs">
+      <DependentUpon>ucProductInCart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ucProductInShop.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ucProductInShop.Designer.cs">
+      <DependentUpon>ucProductInShop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ucProUseList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ucProUseList.Designer.cs">
+      <DependentUpon>ucProUseList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLoading.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLoading.Designer.cs">
+      <DependentUpon>frmLoading.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Util\DataGridViewDisableButton.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GoodsDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GoodsDetail.Designer.cs">
+      <DependentUpon>GoodsDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HomeGuest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HomeGuest.Designer.cs">
+      <DependentUpon>HomeGuest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Join.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Join.Designer.cs">
+      <DependentUpon>Join.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Join2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Join2.Designer.cs">
+      <DependentUpon>Join2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Order.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Order.Designer.cs">
+      <DependentUpon>Order.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OrderedInfoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OrderedInfoForm.Designer.cs">
+      <DependentUpon>OrderedInfoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OrderedReceipt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OrderedReceipt.Designer.cs">
+      <DependentUpon>OrderedReceipt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OrderedReceipt2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OrderedReceipt2.Designer.cs">
+      <DependentUpon>OrderedReceipt2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OrderOutput.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OrderOutput.Designer.cs">
+      <DependentUpon>OrderOutput.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OrderOutputAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OrderOutputAdd.Designer.cs">
+      <DependentUpon>OrderOutputAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\PeriodUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\PeriodUserControl.Designer.cs">
+      <DependentUpon>PeriodUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProductConsume.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProductConsume.Designer.cs">
+      <DependentUpon>ProductConsume.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProductMake.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProductMake.Designer.cs">
+      <DependentUpon>ProductMake.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Product.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Product.Designer.cs">
+      <DependentUpon>Product.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Home.Designer.cs">
+      <DependentUpon>Home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="login.Designer.cs">
+      <DependentUpon>login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProductAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProductAdd.Designer.cs">
+      <DependentUpon>ProductAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProductStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProductStock.Designer.cs">
+      <DependentUpon>ProductStock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PurchaseAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PurchaseAdd.Designer.cs">
+      <DependentUpon>PurchaseAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Purchase.Designer.cs">
+      <DependentUpon>Purchase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PurchaseInput.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PurchaseInput.Designer.cs">
+      <DependentUpon>PurchaseInput.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PurchaseInputAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PurchaseInputAdd.Designer.cs">
+      <DependentUpon>PurchaseInputAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Services\BomService.cs" />
+    <Compile Include="Services\BusinessService.cs" />
+    <Compile Include="Services\CommonService.cs" />
+    <Compile Include="Services\CustomerService.cs" />
+    <Compile Include="Services\InputService.cs" />
+    <Compile Include="Services\ItemService.cs" />
+    <Compile Include="Services\ProductService.cs" />
+    <Compile Include="Services\PurchaseService.cs" />
+    <Compile Include="Services\StockService.cs" />
+    <Compile Include="Controls\ucTabControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\ucTabControl.Designer.cs">
+      <DependentUpon>ucTabControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ThisIsOrder_T.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThisIsOrder_T.Designer.cs">
+      <DependentUpon>ThisIsOrder_T.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Util\CommonUtil.cs" />
+    <Compile Include="Util\DataGridViewUtil.cs" />
+    <Compile Include="Controls\ZipControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ZipControl.Designer.cs">
+      <DependentUpon>ZipControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Util\ImageUtil.cs" />
+    <Compile Include="ZipSearchPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ZipSearchPopup.designer.cs">
+      <DependentUpon>ZipSearchPopup.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Bom.resx">
+      <DependentUpon>Bom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BomUpdate.resx">
+      <DependentUpon>BomUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseForm\BaseButton.resx">
+      <DependentUpon>BaseButton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseForm\BaseGridViewForm.resx">
+      <DependentUpon>BaseGridViewForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseForm\BasePopupForm.resx">
+      <DependentUpon>BasePopupForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseForm\BasePopupForm2.resx">
+      <DependentUpon>BasePopupForm2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseForm\BaseTabMenu.resx">
+      <DependentUpon>BaseTabMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseForm\BaseTreeGridForm.resx">
+      <DependentUpon>BaseTreeGridForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseForm\BaseGridViewForm2.resx">
+      <DependentUpon>BaseGridViewForm2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseForm\BaseTreeChartListForm.resx">
+      <DependentUpon>BaseTreeChartListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Business.resx">
+      <DependentUpon>Business.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BusinessAdd.resx">
+      <DependentUpon>BusinessAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BomAdd.resx">
+      <DependentUpon>BomAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Base2.resx">
+      <DependentUpon>Base2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BusinessProductSearch.resx">
+      <DependentUpon>BusinessProductSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cart.resx">
+      <DependentUpon>Cart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ucOrderedReceipt.resx">
+      <DependentUpon>ucOrderedReceipt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ucProductInCart.resx">
+      <DependentUpon>ucProductInCart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ucProductInShop.resx">
+      <DependentUpon>ucProductInShop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ucProUseList.resx">
+      <DependentUpon>ucProUseList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLoading.resx">
+      <DependentUpon>frmLoading.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GoodsDetail.resx">
+      <DependentUpon>GoodsDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HomeGuest.resx">
+      <DependentUpon>HomeGuest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Join.resx">
+      <DependentUpon>Join.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Join2.resx">
+      <DependentUpon>Join2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Order.resx">
+      <DependentUpon>Order.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OrderedInfoForm.resx">
+      <DependentUpon>OrderedInfoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OrderedReceipt.resx">
+      <DependentUpon>OrderedReceipt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OrderedReceipt2.resx">
+      <DependentUpon>OrderedReceipt2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OrderOutput.resx">
+      <DependentUpon>OrderOutput.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OrderOutputAdd.resx">
+      <DependentUpon>OrderOutputAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\PeriodUserControl.resx">
+      <DependentUpon>PeriodUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductConsume.resx">
+      <DependentUpon>ProductConsume.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductMake.resx">
+      <DependentUpon>ProductMake.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Product.resx">
+      <DependentUpon>Product.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Home.resx">
+      <DependentUpon>Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="login.resx">
+      <DependentUpon>login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductAdd.resx">
+      <DependentUpon>ProductAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductStock.resx">
+      <DependentUpon>ProductStock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="PurchaseAdd.resx">
+      <DependentUpon>PurchaseAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Purchase.resx">
+      <DependentUpon>Purchase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PurchaseInput.resx">
+      <DependentUpon>PurchaseInput.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PurchaseInputAdd.resx">
+      <DependentUpon>PurchaseInputAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ucTabControl.resx">
+      <DependentUpon>ucTabControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ZipControl.resx">
+      <DependentUpon>ZipControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThisIsOrder_T.resx">
+      <DependentUpon>ThisIsOrder_T.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ZipSearchPopup.resx">
+      <DependentUpon>ZipSearchPopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Templates\template.xls" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="image\free-icon-add-file-1091916.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="image\free-icon-refresh-page-option-25429.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="image\free-icon-edit-1827933.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="image\free-icon-delete-bin-72396.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="image\free-icon-add-file-1159954.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="image\free-icon-add-file-1324044.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="image\free-icon-add-2311991.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="image\free-icon-edit-button-84380.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="image\icon_save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="image\save-button-interface-symbol-of-outlined-diskette_icon-icons.com_73167 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="image\floppydisksavefile_85743.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\free-icon-save-file-option-25398.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\premium-icon-check-mark-5276925.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="image\premium-icon-find-2207590.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Team5DAC\Team5DAC.csproj">
+      <Project>{84caec81-f5e0-411d-946c-ad84adfb7b51}</Project>
+      <Name>Team5DAC</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TeamVO\Team5VO.csproj">
+      <Project>{fc05e6f2-532c-4fa9-85a3-22c6cb35f70a}</Project>
+      <Name>Team5VO</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Library\Microsoft.Office.Interop.Excel.dll" />
+    <Content Include="Library\Microsoft.Vbe.Interop.dll" />
+    <Content Include="Library\OFFICE.DLL" />
+    <Content Include="Resources\close-grey.png" />
+    <Content Include="Resources\close-red.png" />
+    <None Include="Resources\loading.gif" />
+    <None Include="Resources\loading.bmp" />
+    <None Include="Resources\icon_close_black.png" />
+    <None Include="Resources\free-icon-close-1828666.png" />
+    <None Include="Resources\premium-icon-letter-x-59180651.png" />
+    <None Include="Resources\free-icon-close-1828665.png" />
+    <None Include="Resources\premium-icon-letter-x-5918065.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>8</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Excel1">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>9</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
